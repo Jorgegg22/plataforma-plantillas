@@ -1,0 +1,180 @@
+[
+  {
+    "id": "factura-proforma",
+    "titulo": "Factura Proforma Profesional",
+    "formato": "Excel (.xlsx)",
+    "etiqueta": "bg-success-subtle text-success border-success-subtle",
+    "descripcion": "Modelo esencial para autónomos. Detalla acuerdos comerciales y presupuestos antes de la facturación final.",
+    "categoria": "negocios",
+    "icono": "📊",
+    "contenido": "Evita malentendidos con tus clientes. Esta plantilla de factura proforma te permite desglosar servicios, impuestos y validez de la oferta de forma impecable. Incluye cálculo automático de IVA y Retenciones.",
+    "imagen": "/img/previews/factura-proforma.webp"
+  },
+  {
+    "id": "presupuesto",
+    "titulo": "Presupuesto para Clientes",
+    "formato": "Excel (.xlsx)",
+    "etiqueta": "bg-success-subtle text-success border-success-subtle",
+    "descripcion": "Gana más proyectos con presupuestos claros. Calcula totales, descuentos e impuestos de forma automática.",
+    "categoria": "negocios",
+    "icono": "📝",
+    "contenido": "La primera impresión es la que cuenta. Con este modelo de presupuesto en Excel, presentarás tus honorarios de forma estructurada, profesional y fácil de entender, aumentando tus posibilidades de cierre.",
+    "imagen": "/img/previews/presupuesto-cliente.webp"
+  
+  
+  },
+  {
+    "id": "inventario",
+    "titulo": "Control de Inventario y Stock",
+    "formato": "Excel (.xlsx)",
+    "etiqueta": "bg-success-subtle text-success border-success-subtle",
+    "descripcion": "Gestiona tus productos sin errores. Alertas de stock bajo y valoración de almacén en tiempo real.",
+    "categoria": "negocios",
+    "icono": "📦",
+    "contenido": "No pierdas ventas por falta de producto. Esta plantilla automatizada te avisa cuando necesitas reponer mercancía y calcula el valor total de tu inventario según entradas y salidas.",
+    "imagen": "/img/previews/inventario.webp"
+  },
+  {
+    "id": "recibo",
+    "titulo": "Recibo de Pago Editable",
+    "formato": "Word (.docx)",
+    "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
+    "descripcion": "Comprobante de pago oficial y sencillo. Ideal para alquileres, servicios profesionales o ventas directas.",
+    "categoria": "negocios",
+    "icono": "🎫",
+    "contenido": "Genera justificantes de pago al instante. Este formato de Word es totalmente editable y profesional, listo para imprimir o enviar por email como comprobante de recepción de fondos.",
+    "imagen": "/img/previews/recibo-pago.webp"
+  },
+  {
+    "id": "cv-minimalista",
+    "titulo": "CV Minimalista Moderno",
+    "formato": "Word (.docx)",
+    "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
+    "descripcion": "Diseño limpio que prioriza la legibilidad. Optimizado para pasar los filtros automáticos (ATS) de RRHH.",
+    "categoria": "curriculums",
+    "icono": "👤",
+    "contenido": "Menos es más. Este currículum elimina distracciones visuales para que tu experiencia y habilidades sean las protagonistas. Un diseño elegante que proyecta profesionalidad y orden.",
+    "imagen": "/img/previews/cv-minimalista.webp"
+  },
+  {
+    "id": "cv-europeo",
+    "titulo": "Currículum Europass Oficial",
+    "formato": "Word (.docx)",
+    "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
+    "descripcion": "El estándar europeo para buscar empleo. Estructura oficial reconocida en todas las instituciones de la UE.",
+    "categoria": "curriculums",
+    "icono": "🇪🇺",
+    "contenido": "Si buscas empleo en Europa, el Europass es obligatorio. Esta plantilla de Word respeta la estructura oficial para que solo tengas que rellenar tus datos y exportar a PDF.",
+    "imagen": "/img/previews/europass.webp"
+  },
+  {
+    "id": "carta-presentacion",
+    "titulo": "Carta de Presentación Persuasiva",
+    "formato": "Word (.docx)",
+    "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
+    "descripcion": "Marca la diferencia frente a otros candidatos. Estructura profesional para explicar por qué eres el mejor.",
+    "categoria": "curriculums",
+    "icono": "✉️",
+    "contenido": "El CV no lo es todo. Acompaña tu candidatura con una carta de presentación que conecte con el reclutador y destaque tu valor diferencial de forma directa y elegante.",
+    "imagen": "/img/previews/presentacion.webp"
+  },
+  {
+    "id": "cuadrante-turnos",
+    "titulo": "Cuadrante de Turnos Laborales",
+    "formato": "Excel (.xlsx)",
+    "etiqueta": "bg-success-subtle text-success border-success-subtle",
+    "descripcion": "Organiza los horarios de tu equipo. Control de libranzas, vacaciones y horas semanales sin esfuerzo.",
+    "categoria": "curriculums",
+    "icono": "📅",
+    "contenido": "Gestionar el personal nunca fue tan fácil. Visualiza de un vistazo quién trabaja y quién libra cada día, evitando solapamientos y asegurando la cobertura de tu negocio.",
+    "imagen": "/img/previews/cuadrante-turnos.webp"
+  },
+  {
+    "id": "horario-semanal",
+    "titulo": "Horario Semanal Estético",
+    "formato": "PDF Imprimible",
+    "etiqueta": "bg-danger-subtle text-danger border-danger-subtle",
+    "descripcion": "Planificador de bloques de tiempo. Ideal para estudiantes y freelances que buscan máxima productividad.",
+    "categoria": "organizacion",
+    "icono": "⏰",
+    "contenido": "Domina tu semana. Este horario permite aplicar la técnica de 'Time Blocking', separando tareas por colores y prioridades. Formato de alta calidad listo para imprimir.",
+    "imagen": "/img/previews/horario.webp"
+  },
+  {
+    "id": "planificador-mensual",
+    "titulo": "Planificador Mensual Perpetuo",
+    "formato": "PDF / Word",
+    "etiqueta": "bg-danger-subtle text-danger border-danger-subtle",
+    "descripcion": "Vista global de tus compromisos. Sin fechas fijas, puedes usarlo para cualquier mes del año.",
+    "categoria": "organizacion",
+    "icono": "🗓️",
+    "contenido": "No olvides ni una sola cita. Este calendario mensual te da la perspectiva necesaria para organizar eventos, exámenes o hitos importantes de forma visual y clara.",
+    "imagen": "/img/previews/planificador.webp"
+  },
+  {
+    "id": "menu-semanal",
+    "titulo": "Planificador de Menú y Dieta",
+    "formato": "PDF / Excel",
+    "etiqueta": "bg-danger-subtle text-danger border-danger-subtle",
+    "descripcion": "Organiza tus comidas y ahorra en la cesta de la compra. Incluye sección para lista del supermercado.",
+    "categoria": "organizacion",
+    "icono": "🍎",
+    "contenido": "Comer sano requiere planificación. Con este menú semanal evitarás la improvisación (y la comida basura), ahorrando dinero al comprar solo lo que realmente vas a cocinar.",
+    "imagen": "/img/previews/dieta.webp"
+  },
+  {
+    "id": "lista-tareas",
+    "titulo": "Lista de Tareas Priorizadas",
+    "formato": "Word (.docx)",
+    "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
+    "descripcion": "Método To-Do efectivo. Organiza tus pendientes por importancia y fecha de entrega.",
+    "categoria": "organizacion",
+    "icono": "✅",
+    "contenido": "Vacía tu mente y pon orden. Esta lista de tareas te ayuda a concentrarte en lo importante, permitiéndote tachar objetivos cumplidos para mantener la motivación alta.",
+    "imagen": "/img/previews/tareas.webp"
+  },
+  {
+    "id": "control-gastos",
+    "titulo": "Control de Gastos Diarios",
+    "formato": "Excel (.xlsx)",
+    "etiqueta": "bg-success-subtle text-success border-success-subtle",
+    "descripcion": "La herramienta definitiva de ahorro. Categoriza tus consumos y detecta dónde se escapa tu dinero.",
+    "categoria": "finanzas",
+    "icono": "💸",
+    "contenido": "Si no lo mides, no lo controlas. Esta hoja de Excel te permite registrar cada gasto, generando gráficos automáticos para que veas cuánto dedicas a ocio, vivienda o alimentación.",
+    "imagen": "/img/previews/gastos-diarios.webp"
+  },
+  {
+    "id": "presupuesto-anual",
+    "titulo": "Presupuesto Familiar Anual",
+    "formato": "Excel (.xlsx)",
+    "etiqueta": "bg-success-subtle text-success border-success-subtle",
+    "descripcion": "Planificación financiera a largo plazo. Anticipa gastos grandes (seguros, viajes) y controla tu ahorro neto.",
+    "categoria": "finanzas",
+    "icono": "🏡",
+    "contenido": "Proyecta tu economía a 12 meses vista. Con esta plantilla podrás prever meses difíciles y planificar grandes inversiones con seguridad, sabiendo siempre tu saldo real.",
+    "imagen": "/img/previews/presupuesto.webp"
+  },
+  {
+    "id": "calculadora-ahorro",
+    "titulo": "Calculadora de Metas de Ahorro",
+    "formato": "Excel (.xlsx)",
+    "etiqueta": "bg-success-subtle text-success border-success-subtle",
+    "descripcion": "¿Cuánto necesitas ahorrar al mes para tu próximo viaje o coche? Descúbrelo con esta calculadora.",
+    "categoria": "finanzas",
+    "icono": "🎯",
+    "contenido": "Ponle fecha a tus sueños. Introduce tu objetivo de ahorro y tu capacidad mensual; la calculadora te dirá exactamente cuándo lo conseguirás y cómo acelerar el proceso.",
+    "imagen": "/img/previews/ahorros.webp"
+  },
+  {
+    "id": "amortizacion-prestamo",
+    "titulo": "Simulador de Préstamos e Hipotecas",
+    "formato": "Excel (.xlsx)",
+    "etiqueta": "bg-success-subtle text-success border-success-subtle",
+    "descripcion": "Calcula tu cuota mensual y el total de intereses. Sistema de amortización francés automatizado.",
+    "categoria": "finanzas",
+    "icono": "📉",
+    "contenido": "No vayas al banco a ciegas. Este simulador te muestra cuánto pagarás de letra cada mes y cuánto dinero total acabarás devolviendo en intereses según el tipo aplicado.",
+    "imagen": "/img/previews/simulador-prestamos.webp"
+  }
+]

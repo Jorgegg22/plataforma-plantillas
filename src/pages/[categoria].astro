@@ -1,0 +1,189 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import plantillasData from '../data/plantillas.json';
+import { ClientRouter } from 'astro:transitions';
+
+export function getStaticPaths() {
+  const categorias = [
+    {
+      slug: 'negocios',
+      titulo: 'Negocios y Facturación',
+      descripcion: 'Optimiza la contabilidad de tu empresa y la gestión con tus clientes utilizando nuestros formatos profesionales.'
+    },
+    {
+      slug: 'curriculums',
+      titulo: 'Currículums y Empleo',
+      descripcion: 'Consigue la entrevista que buscas con diseños estructurados para destacar tus habilidades y experiencia.'
+    },
+    {
+      slug: 'organizacion',
+      titulo: 'Organización y Productividad',
+      descripcion: 'Gana control sobre tu tiempo libre y obligaciones. Recursos diseñados para la planificación inteligente.'
+    },
+    {
+      slug: 'finanzas',
+      titulo: 'Finanzas Personales',
+      descripcion: 'Herramientas financieras al alcance de todos para monitorear ingresos, gastos y capacidad de ahorro.'
+    }
+  ];
+
+  return categorias.map(cat => {
+    return {
+      params: { categoria: cat.slug },
+      props: {
+        tituloCategoria: cat.titulo,
+        descripcionCategoria: cat.descripcion
+      }
+    };
+  });
+}
+
+const { categoria } = Astro.params;
+const { tituloCategoria, descripcionCategoria } = Astro.props;
+
+const plantillas = plantillasData.filter(p => p.categoria === categoria);
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plantillas de {tituloCategoria} Gratis | Plantillas Pro</title>
+    <meta name="description" content={`Descarga gratis las mejores plantillas de ${tituloCategoria}. ${descripcionCategoria}`} />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <ClientRouter/>
+    
+    <style>
+      :root {
+        --primary-color: #0d6efd;
+        --accent-color: #f8f9fa;
+      }
+
+      [transition\:name^="img-"] {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  will-change: transform, opacity; /* Esto prepara a la tarjeta gráfica */
+}
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: #334155;
+      }
+
+      .category-header {
+        background: linear-gradient(to bottom, #ffffff, #f8fafc);
+      }
+
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid #e2e8f0 !important;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-10px);
+        border-color: var(--primary-color) !important;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+      }
+
+      .badge-format {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.5em 1em;
+        letter-spacing: 0.025em;
+        text-transform: uppercase;
+      }
+
+      .btn-download {
+        background-color: var(--primary-color);
+        border: none;
+        padding: 0.8rem;
+        transition: background 0.3s ease;
+      }
+
+      .btn-download:hover {
+        background-color: #020617;
+        color: white;
+      }
+
+      .ad-placeholder {
+        background-color: #f1f5f9;
+        border: 2px dashed #cbd5e1 !important;
+        color: #64748b;
+        font-weight: 500;
+      }
+
+      .img-card {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body class="bg-light d-flex flex-column min-vh-100">
+    
+    <Header />
+
+    <div class="category-header border-bottom py-5">
+      <div class="container text-center py-4">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{tituloCategoria}</li>
+          </ol>
+        </nav>
+        <h1 class="display-3 fw-bold text-dark mb-3 ls-tight">{tituloCategoria}</h1>
+        <p class="lead text-secondary mx-auto mb-0" style="max-width: 650px;">
+          {descripcionCategoria}
+        </p>
+      </div>
+    </div>
+
+    <div class="container py-5 flex-grow-1">
+      
+      <div class="ad-placeholder rounded-4 p-4 text-center mb-5">
+        <span class="small uppercase ls-wide">Anuncio recomendado</span>
+        <div class="py-3 mt-1">[ ESPACIO ADSENSE - DISPLAY HORIZONTAL ]</div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        {plantillas.map((plantilla) => (
+          <div class="col-md-6 col-xl-3">
+            <div class="card h-100 bg-white rounded-4 p-3 card-hover border-0">
+              <div class="card-body d-flex flex-column text-start">
+                <div class="mb-3">
+                  <span class={`badge rounded-pill badge-format ${plantilla.etiqueta}`}>
+                    {plantilla.formato}
+                  </span>
+                </div>
+                
+                <a href={`/plantillas/${plantilla.id}`} class="text-decoration-none">
+      <img 
+        transition:name={`img-${plantilla.id}`}
+        src={plantilla.imagen} 
+        class="img-fluid rounded-3 mb-3 img-card" 
+        alt={plantilla.titulo}
+      />
+    </a>
+
+                <h4 class="card-title text-dark fs-5 fw-bold mb-3">{plantilla.titulo}</h4>
+                <p class="card-text text-muted mb-4 small lh-base flex-grow-1">
+                  {plantilla.descripcion}
+                </p>
+                <a href={`/plantillas/${plantilla.id}`} class="btn btn-download text-white w-100 fw-bold rounded-3">
+                  Ver y Descargar
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+
+    <Footer />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,36 +1,82 @@
 ---
+
 ---
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
   <div class="container">
     <a class="navbar-brand fw-bold fs-3" href="/">
-      <span class="text-dark">TUS</span><span class="text-primary">PLANTILLAS</span>
+      <span class="text-dark">TUS</span><span class="text-primary"
+        >PLANTILLAS</span
+      >
     </a>
-    
-    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+
+    <button
+      class="navbar-toggler border-0 shadow-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#menuNavegacion"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="menuNavegacion">
       <ul class="navbar-nav ms-auto fw-medium fs-6 text-center mt-3 mt-lg-0">
         <li class="nav-item mx-lg-2 mb-2 mb-lg-0">
           <a class="nav-link text-dark rounded px-3" href="/">Inicio</a>
         </li>
         <li class="nav-item mx-lg-2">
-          <a class="nav-link text-dark rounded px-3" href="/crear">Crea tu plantilla</a>
+          <a class="nav-link text-dark rounded px-3" href="/crear"
+            >Crea tu plantilla</a
+          >
         </li>
         <li class="nav-item mx-lg-2 mb-2 mb-lg-0">
-          <a class="nav-link text-dark rounded px-3" href="/negocios">Negocios</a>
+          <a class="nav-link text-dark rounded px-3" href="/excel"
+            >Plantillas Excel</a
+          >
         </li>
         <li class="nav-item mx-lg-2 mb-2 mb-lg-0">
-          <a class="nav-link text-dark rounded px-3" href="/curriculums">Currículums</a>
+          <a class="nav-link text-dark rounded px-3" href="/word"
+            >Plantillas word</a
+          >
         </li>
         <li class="nav-item mx-lg-2 mb-2 mb-lg-0">
-          <a class="nav-link text-dark rounded px-3" href="/organizacion">Organización</a>
+          <a class="nav-link text-dark rounded px-3" href="/pdf"
+            >Plantillas PDF</a
+          >
         </li>
-        <li class="nav-item mx-lg-2">
-          <a class="nav-link text-dark rounded px-3" href="/finanzas">Finanzas</a>
+        <li class="nav-item dropdown ps-lg-2">
+          <a
+            class="nav-link dropdown-toggle px-3 text-dark"
+            href="#"
+            id="dropdownCategorias"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Categorías
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end border-0 shadow mt-2 rounded-4"
+            aria-labelledby="dropdownCategorias"
+          >
+            <li>
+              <a class="dropdown-item py-2 px-4" href="/negocios"
+                >Negocios</a>
+            </li>
+            <li>
+              <a class="dropdown-item py-2 px-4" href="/curriculums"
+                >Currículums</a>
+            </li>
+            <li>
+              <a class="dropdown-item py-2 px-4" href="/organizacion"
+                >Organización</a>
+            </li>
+            <li>
+              <a class="dropdown-item py-2 px-4" href="/finanzas"
+                >Finanzas</a>
+            </li>
+          </ul>
         </li>
-        
       </ul>
     </div>
   </div>
@@ -43,5 +89,19 @@
   .nav-link:hover {
     background-color: #f8f9fa;
     color: #0d6efd !important;
+  }
+  .hover-primary {
+    transition: color 0.2s ease;
+  }
+  .hover-primary:hover, .nav-link:focus {
+    color: #6366f1 !important;
+  }
+  .dropdown-item {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .dropdown-item:hover {
+    background-color: #f8fafc;
+    color: #6366f1;
+    font-weight: 600;
   }
 </style>

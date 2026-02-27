@@ -2,7 +2,7 @@
   {
     "id": "factura-proforma",
     "titulo": "Factura Proforma Profesional",
-    "formato": "Excel (.xlsx)",
+    "formato": "Excel",
     "etiqueta": "bg-success-subtle text-success border-success-subtle",
     "descripcion": "Modelo esencial para autónomos. Detalla acuerdos comerciales y presupuestos antes de la facturación final.",
     "categoria": "negocios",
@@ -13,20 +13,18 @@
   {
     "id": "presupuesto",
     "titulo": "Presupuesto para Clientes",
-    "formato": "Excel (.xlsx)",
+    "formato": "Excel",
     "etiqueta": "bg-success-subtle text-success border-success-subtle",
     "descripcion": "Gana más proyectos con presupuestos claros. Calcula totales, descuentos e impuestos de forma automática.",
     "categoria": "negocios",
     "icono": "📝",
     "contenido": "La primera impresión es la que cuenta. Con este modelo de presupuesto en Excel, presentarás tus honorarios de forma estructurada, profesional y fácil de entender, aumentando tus posibilidades de cierre.",
     "imagen": "/img/previews/presupuesto-cliente.webp"
-  
-  
   },
   {
     "id": "inventario",
     "titulo": "Control de Inventario y Stock",
-    "formato": "Excel (.xlsx)",
+    "formato": "Excel",
     "etiqueta": "bg-success-subtle text-success border-success-subtle",
     "descripcion": "Gestiona tus productos sin errores. Alertas de stock bajo y valoración de almacén en tiempo real.",
     "categoria": "negocios",
@@ -37,7 +35,7 @@
   {
     "id": "recibo",
     "titulo": "Recibo de Pago Editable",
-    "formato": "Word (.docx)",
+    "formato": "Word",
     "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
     "descripcion": "Comprobante de pago oficial y sencillo. Ideal para alquileres, servicios profesionales o ventas directas.",
     "categoria": "negocios",
@@ -48,7 +46,7 @@
   {
     "id": "cv-minimalista",
     "titulo": "CV Minimalista Moderno",
-    "formato": "Word (.docx)",
+    "formato": "Word",
     "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
     "descripcion": "Diseño limpio que prioriza la legibilidad. Optimizado para pasar los filtros automáticos (ATS) de RRHH.",
     "categoria": "curriculums",
@@ -59,7 +57,7 @@
   {
     "id": "cv-europeo",
     "titulo": "Currículum Europass Oficial",
-    "formato": "Word (.docx)",
+    "formato": "Word",
     "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
     "descripcion": "El estándar europeo para buscar empleo. Estructura oficial reconocida en todas las instituciones de la UE.",
     "categoria": "curriculums",
@@ -70,7 +68,7 @@
   {
     "id": "carta-presentacion",
     "titulo": "Carta de Presentación Persuasiva",
-    "formato": "Word (.docx)",
+    "formato": "Word",
     "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
     "descripcion": "Marca la diferencia frente a otros candidatos. Estructura profesional para explicar por qué eres el mejor.",
     "categoria": "curriculums",
@@ -81,7 +79,7 @@
   {
     "id": "cuadrante-turnos",
     "titulo": "Cuadrante de Turnos Laborales",
-    "formato": "Excel (.xlsx)",
+    "formato": "Excel",
     "etiqueta": "bg-success-subtle text-success border-success-subtle",
     "descripcion": "Organiza los horarios de tu equipo. Control de libranzas, vacaciones y horas semanales sin esfuerzo.",
     "categoria": "curriculums",
@@ -92,7 +90,7 @@
   {
     "id": "horario-semanal",
     "titulo": "Horario Semanal Estético",
-    "formato": "PDF Imprimible",
+    "formato": "PDF",
     "etiqueta": "bg-danger-subtle text-danger border-danger-subtle",
     "descripcion": "Planificador de bloques de tiempo. Ideal para estudiantes y freelances que buscan máxima productividad.",
     "categoria": "organizacion",
@@ -103,7 +101,7 @@
   {
     "id": "planificador-mensual",
     "titulo": "Planificador Mensual Perpetuo",
-    "formato": "PDF / Word",
+    "formato": "PDF",
     "etiqueta": "bg-danger-subtle text-danger border-danger-subtle",
     "descripcion": "Vista global de tus compromisos. Sin fechas fijas, puedes usarlo para cualquier mes del año.",
     "categoria": "organizacion",
@@ -114,7 +112,7 @@
   {
     "id": "menu-semanal",
     "titulo": "Planificador de Menú y Dieta",
-    "formato": "PDF / Excel",
+    "formato": "PDF",
     "etiqueta": "bg-danger-subtle text-danger border-danger-subtle",
     "descripcion": "Organiza tus comidas y ahorra en la cesta de la compra. Incluye sección para lista del supermercado.",
     "categoria": "organizacion",
@@ -125,7 +123,7 @@
   {
     "id": "lista-tareas",
     "titulo": "Lista de Tareas Priorizadas",
-    "formato": "Word (.docx)",
+    "formato": "Word",
     "etiqueta": "bg-primary-subtle text-primary border-primary-subtle",
     "descripcion": "Método To-Do efectivo. Organiza tus pendientes por importancia y fecha de entrega.",
     "categoria": "organizacion",
@@ -136,7 +134,7 @@
   {
     "id": "control-gastos",
     "titulo": "Control de Gastos Diarios",
-    "formato": "Excel (.xlsx)",
+    "formato": "Excel",
     "etiqueta": "bg-success-subtle text-success border-success-subtle",
     "descripcion": "La herramienta definitiva de ahorro. Categoriza tus consumos y detecta dónde se escapa tu dinero.",
     "categoria": "finanzas",
@@ -147,7 +145,7 @@
   {
     "id": "presupuesto-anual",
     "titulo": "Presupuesto Familiar Anual",
-    "formato": "Excel (.xlsx)",
+    "formato": "Excel",
     "etiqueta": "bg-success-subtle text-success border-success-subtle",
     "descripcion": "Planificación financiera a largo plazo. Anticipa gastos grandes (seguros, viajes) y controla tu ahorro neto.",
     "categoria": "finanzas",
@@ -158,7 +156,7 @@
   {
     "id": "calculadora-ahorro",
     "titulo": "Calculadora de Metas de Ahorro",
-    "formato": "Excel (.xlsx)",
+    "formato": "Excel",
     "etiqueta": "bg-success-subtle text-success border-success-subtle",
     "descripcion": "¿Cuánto necesitas ahorrar al mes para tu próximo viaje o coche? Descúbrelo con esta calculadora.",
     "categoria": "finanzas",
@@ -169,7 +167,7 @@
   {
     "id": "amortizacion-prestamo",
     "titulo": "Simulador de Préstamos e Hipotecas",
-    "formato": "Excel (.xlsx)",
+    "formato": "Excel",
     "etiqueta": "bg-success-subtle text-success border-success-subtle",
     "descripcion": "Calcula tu cuota mensual y el total de intereses. Sistema de amortización francés automatizado.",
     "categoria": "finanzas",

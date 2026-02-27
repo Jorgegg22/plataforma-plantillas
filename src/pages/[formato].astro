@@ -1,0 +1,169 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import plantillasData from "../data/plantillas.json";
+import { ClientRouter } from "astro:transitions";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  const formatos = ["excel", "pdf", "word"];
+
+  return formatos.map((formato) => {
+    const filtradas = plantillasData.filter(
+      (p) => p.formato.toLowerCase() === formato
+    );
+    
+    return {
+      params: { formato: formato },
+      props: { plantillas: filtradas, formatoActual: formato },
+    };
+  });
+}
+
+const { plantillas, formatoActual } = Astro.props;
+
+if (!plantillas || plantillas.length === 0) {
+  return Astro.redirect("/404");
+}
+
+const seoContent = {
+  excel: {
+    titulo: "Plantillas de Excel Gratis y Editables",
+    metaDesc: "Descarga gratis las mejores plantillas de Excel (.xlsx) para negocios, finanzas y organización. Formatos automatizados con fórmulas listas para usar.",
+    textoSEO: "Las hojas de cálculo son el motor de cualquier negocio o planificación personal. En esta sección encontrarás plantillas de Excel diseñadas para ahorrarte horas de trabajo manual. Desde presupuestos y calculadoras de hipotecas hasta sistemas de control de inventario, cada archivo incluye fórmulas automatizadas y un diseño estructurado. Solo tienes que descargar el formato .xlsx, introducir tus datos y dejar que la plantilla haga los cálculos complejos por ti."
+  },
+  word: {
+    titulo: "Plantillas de Word Profesionales",
+    metaDesc: "Encuentra plantillas de Word (.docx) gratis listas para rellenar. Currículums, recibos y cartas de presentación con diseño profesional.",
+    textoSEO: "Un documento bien estructurado transmite profesionalidad al instante. Nuestro catálogo de plantillas de Word está pensado para facilitarte la creación de documentos de texto impecables sin pelear con los márgenes. Ya sea que necesites redactar un currículum moderno que pase los filtros de RRHH o generar recibos y cartas formales, estos archivos .docx son totalmente personalizables. Descarga el modelo, edita la información y expórtalo o imprímelo al instante."
+  },
+  pdf: {
+    titulo: "Plantillas PDF Listas para Imprimir",
+    metaDesc: "Descarga plantillas PDF gratuitas de alta calidad. Planificadores, horarios y calendarios estéticos listos para imprimir o usar en tu tablet.",
+    textoSEO: "El formato PDF es perfecto cuando buscas un diseño inalterable y listo para la acción. Aquí agrupamos nuestras herramientas de productividad y organización en alta resolución. Descubre planificadores mensuales, horarios de estudio y organizadores de menús semanales con un diseño estético y minimalista. Son formatos ideales tanto para imprimir directamente en tamaño A4 y colgar en tu pared, como para importar en aplicaciones de notas de tu tablet."
+  }
+};
+
+const datosSEO = seoContent[formatoActual.toLowerCase() as keyof typeof seoContent] || {
+  titulo: `Plantillas ${formatoActual.toUpperCase()}`,
+  metaDesc: `Descarga plantillas gratuitas en formato ${formatoActual}.`,
+  textoSEO: `Encuentra las mejores plantillas en formato ${formatoActual}.`
+};
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{datosSEO.titulo} | Plantillas Pro</title>
+    <meta name="description" content={datosSEO.metaDesc} />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <ClientRouter />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+      }
+      .card-hover {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+      }
+      .img-wrapper {
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: #f1f5f9;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .ad-box {
+        background-color: #f1f5f9;
+        border: 2px dashed #cbd5e1 !important;
+        color: #64748b;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .seo-section {
+        background-color: white;
+        border-radius: 1rem;
+        padding: 2.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <Header />
+
+    <main class="flex-grow-1 py-5">
+      <div class="container mb-4">
+        <div class="ad-box p-3 text-center" style="min-height: 120px;">
+          <p class="small text-uppercase fw-bold mb-0">Publicidad - Banner Superior (AdSense Leaderboard)</p>
+        </div>
+      </div>
+
+      <div class="container mb-5">
+        <div class="seo-section text-center text-md-start">
+          <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">
+            Catálogo de Formatos
+          </span>
+          <h1 class="display-4 fw-bold text-dark mb-4">
+            {datosSEO.titulo}
+          </h1>
+          <p class="lead text-secondary lh-lg mb-0">
+            {datosSEO.textoSEO}
+          </p>
+        </div>
+      </div>
+
+      <div class="container mb-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          {plantillas.map((p) => (
+            <div class="col">
+              <a href={`/plantillas/${p.id}`} class="text-decoration-none" data-astro-prefetch="false">
+                <div class="card h-100 border-0 shadow-sm rounded-4 card-hover overflow-hidden">
+                  <div class="img-wrapper">
+                    <img
+                      transition:name={`img-${p.id}`}
+                      src={p.imagen || "/img/placeholder-preview.jpg"}
+                      alt={p.titulo}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card-body p-4">
+                    <span class={`badge rounded-pill mb-3 ${p.etiqueta}`}>
+                      {p.formato}
+                    </span>
+                    <h3 class="h5 fw-bold text-dark mb-2">{p.titulo}</h3>
+                    <p class="card-text text-secondary small mb-0">
+                      {p.descripcion}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="container mb-5">
+        <div class="ad-box p-4 text-center" style="min-height: 250px;">
+          <p class="small text-uppercase fw-bold mb-2">Contenido Patrocinado</p>
+          <p class="text-muted small mb-0">[ ADSENSE IN-ARTICLE / MULTIPLEX ]</p>
+        </div>
+      </div>
+    </main>
+
+    <Footer />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
